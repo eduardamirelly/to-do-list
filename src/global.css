@@ -1,3 +1,19 @@
+/* IMPORT FONT FROM GOOGLE FONTS */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+* {
+  font-family: 'Poppins', sans-serif;
+  @apply text-second-200;
+}
+
+body {
+  @apply bg-dark-900;
+  
+  /* max-width: 1440px; */
+  min-height: 100vh;
+  margin: 0 auto;
+}
