@@ -1,0 +1,8 @@
+/* BUTTON */
+
+.btn {
+  @apply bg-dark-800;
+  @apply text-lg text-primary;
+  @apply flex justify-center items-center;
+  @apply min-w-[205px] py-3 px-4 rounded-xl;
+}

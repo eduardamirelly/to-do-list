@@ -1,10 +1,10 @@
 import { useState } from 'react'
-import TodoList from './pages/TodoList'
+import TodoPage from './pages/TodoPage'
 
 function App() {
   return (
     <>
-      <TodoList />
+      <TodoPage />
     </>
   )
 }

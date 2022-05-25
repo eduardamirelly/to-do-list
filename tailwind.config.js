@@ -15,6 +15,10 @@ module.exports = {
           200: '#FEEDE1',
         }
       },
+      borderRadius: {
+        'sm': '0.25rem',
+        'xl': '2.5rem',
+      },
     },
   },
   plugins: [],
