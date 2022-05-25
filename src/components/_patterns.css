@@ -12,3 +12,24 @@
   @apply ml-4;
 }
 
+/* LIST TO DO */
+
+.list {
+  @apply bg-dark-900 hover:bg-dark-800 text-second-200 text-lg font-normal;
+  @apply cursor-pointer relative;
+  @apply w-full px-6 py-4 flex items-center justify-between;
+
+  box-shadow: 0px 4px 4px rgba(17, 17, 28, 0.6);
+}
+
+.list .option-trash {
+  @apply absolute left-0 top-0 w-2.5 h-full flex items-center justify-center;
+  @apply hover:w-[4.375rem] hover:bg-dark-600 cursor-pointer ;
+  @apply transition-all;
+
+  background-color: rgba(99, 35, 41, 0.6);
+}
+
+.list .option-trash span {
+  transition: opacity .2s linear;
+}
