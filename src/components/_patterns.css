@@ -1,0 +1,14 @@
+/* BUTTON */
+
+.btn {
+  @apply bg-dark-900 text-primary;
+  @apply flex justify-center items-center;
+  @apply min-w-[205px] py-3 px-4 mx-2 rounded-xl;
+  @apply cursor-pointer hover:bg-dark-700 transition-colors;
+}
+
+.btn p{
+  @apply text-lg font-normal;
+  @apply ml-4;
+}
+

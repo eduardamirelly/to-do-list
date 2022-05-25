@@ -1,7 +1,7 @@
 /* IMPORT FONT FROM GOOGLE FONTS */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
 
-@import url(./components/patterns.css);
+@import url(./components/_patterns.css);
 
 @tailwind base;
 @tailwind components;
@@ -9,7 +9,6 @@
 
 * {
   font-family: 'Poppins', sans-serif;
-  @apply text-second-200;
 }
 
 body {

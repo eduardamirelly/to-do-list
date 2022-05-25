@@ -4,7 +4,7 @@ function Button(props) {
   return (
     <div className="btn">
       { props.icon }
-      { props.text }
+      <p>{ props.text }</p>
     </div>
   )
 }

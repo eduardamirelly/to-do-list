@@ -1,11 +1,14 @@
-import { PlusCircle } from 'phosphor-react'
 import React from 'react'
-import Button from '../components/Button/Button'
+import ButtonAddList from '../components/Button/Buttons/ButtonAddList'
+import ButtonAddTodo from '../components/Button/Buttons/ButtonAddTodo'
+import ButtonDeleteList from '../components/Button/Buttons/ButtonDeleteList'
 
 function TodoPage() {
   return (
     <div className="flex justify-center items-center bg-dark-900 w-full h-[100vh]">
-      <Button icon={<PlusCircle />} text="Add new List" />
+      <ButtonAddList />
+      <ButtonAddTodo />
+      <ButtonDeleteList />
     </div>
   )
 }
