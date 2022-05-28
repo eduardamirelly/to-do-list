@@ -17,7 +17,7 @@
 .list {
   @apply bg-dark-900 hover:bg-dark-800 text-second-200 text-lg font-normal rounded-sm;
   @apply cursor-pointer relative;
-  @apply w-full px-6 py-4 flex items-center justify-between;
+  @apply w-full px-6 py-3 flex items-center justify-between;
 
   box-shadow: 0px 4px 4px rgba(17, 17, 28, 0.6);
 }
@@ -38,7 +38,7 @@
 
 .to-do {
   @apply bg-dark-800 hover:bg-dark-700 text-second-200 text-lg font-normal rounded-sm;
-  @apply w-full px-6 py-4 flex items-center justify-between;
+  @apply w-full px-6 py-3 flex items-center justify-between;
 }
 
 .to-do .to-do-content {
