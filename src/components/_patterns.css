@@ -15,7 +15,7 @@
 /* LIST TO DO */
 
 .list {
-  @apply bg-dark-900 hover:bg-dark-800 text-second-200 text-lg font-normal;
+  @apply bg-dark-900 hover:bg-dark-800 text-second-200 text-lg font-normal rounded-sm;
   @apply cursor-pointer relative;
   @apply w-full px-6 py-4 flex items-center justify-between;
 
@@ -32,4 +32,38 @@
 
 .list .option-trash span {
   transition: opacity .2s linear;
+}
+
+/* CHECKBOX TO DO */
+
+.to-do {
+  @apply bg-dark-800 hover:bg-dark-700 text-second-200 text-lg font-normal rounded-sm;
+  @apply w-full px-6 py-4 flex items-center justify-between;
+}
+
+.to-do .to-do-content {
+  @apply flex items-center;
+}
+
+.to-do .to-do-content svg{
+  @apply mr-4 cursor-pointer;
+}
+
+/* MENU OPTIONS TO DO */
+
+.menu-options {
+  @apply cursor-pointer hover:bg-dark-700 p-2 rounded-full relative;
+}
+
+.menu-toggle {
+  @apply absolute right-4 rounded-sm p-4 min-w-[120px];
+  @apply bg-dark-800;
+}
+
+.option {
+  @apply flex items-center justify-start text-second-200 font-normal text-sm;
+}
+
+.option svg {
+  @apply mr-3;
 }
