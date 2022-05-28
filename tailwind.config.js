@@ -19,6 +19,9 @@ module.exports = {
         'sm': '0.25rem',
         'xl': '2.5rem',
       },
+      fontSize: {
+        'md': '1rem'  
+      }
     },
   },
   plugins: [],
