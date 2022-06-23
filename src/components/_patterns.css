@@ -1,7 +1,7 @@
 /* CONTENT */
 
 .container {
-  @apply px-8 pt-4 mt-4;
+  @apply sm:px-8 px-0 pt-4 mt-4 max-w-[1440px] min-w-[100%];
 }
 
 /* BUTTON */
@@ -9,19 +9,19 @@
 .btn {
   @apply bg-dark-900 text-primary;
   @apply flex justify-center items-center;
-  @apply min-w-[205px] py-3 px-4 mx-2 rounded-xl;
+  @apply min-w-[205px] py-3 px-4 mx-2 my-1 rounded-xl;
   @apply cursor-pointer hover:bg-dark-700 transition-colors;
 }
 
 .btn p{
-  @apply text-lg font-normal;
+  @apply sm:text-lg text-md font-normal;
   @apply ml-4;
 }
 
 /* LIST TO DO */
 
 .list {
-  @apply bg-dark-900 hover:bg-dark-800 text-second-200 text-md font-normal rounded-sm;
+  @apply bg-dark-900 hover:bg-dark-800 text-second-200 sm:text-md text-sm font-normal rounded-sm;
   @apply cursor-pointer relative;
   @apply w-full px-6 py-3 mb-5 flex items-center justify-between;
 
@@ -43,7 +43,7 @@
 /* CHECKBOX TO DO */
 
 .to-do {
-  @apply bg-dark-800 hover:bg-dark-700 text-second-200 text-md font-normal rounded-sm;
+  @apply bg-dark-800 hover:bg-dark-700 text-second-200 sm:text-md text-sm font-normal rounded-sm;
   @apply w-full px-6 py-3 mb-5 flex items-center justify-between;
 }
 
@@ -78,5 +78,5 @@
 /* TEXTS AND TITLES */
 
 .title-header {
-  @apply text-2xl text-second-100 font-semibold uppercase;
+  @apply text-2xl text-second-100 font-semibold uppercase text-center;
 }

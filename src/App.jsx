@@ -1,4 +1,3 @@
-import { useState } from 'react'
 import TodoPage from './pages/TodoPage'
 
 function App() {

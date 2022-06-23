@@ -7,7 +7,7 @@ import CheckboxTodo from '../components/CheckboxTodo/CheckboxTodo'
 
 function TodoPage() {
   return (
-    <div className="flex flex-col bg-dark-900 w-full min-h-[100vh] px-4 py-4">
+    <div className="flex flex-col items-center bg-dark-900 w-full min-h-[100vh] px-4 py-4">
 
       <div className="container">
         <HeaderPage />
