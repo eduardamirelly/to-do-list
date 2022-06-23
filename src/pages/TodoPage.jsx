@@ -14,7 +14,9 @@ function TodoPage() {
       </div>
 
       <div className="container">
-        <CoverInitialPage />
+        {/* <CoverInitialPage /> */}
+        {/* <ListTodo title="Lista" /> */}
+        <CheckboxTodo />
       </div>
 
     </div>

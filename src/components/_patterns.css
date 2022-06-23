@@ -48,11 +48,15 @@
 }
 
 .to-do .to-do-content {
-  @apply flex items-center;
+  @apply flex items-center w-full;
 }
 
 .to-do .to-do-content svg{
   @apply mr-4 cursor-pointer;
+}
+
+.to-do .to-do-content textarea {
+  @apply resize-none bg-transparent overflow-hidden outline-none leading-6 py-2 w-full;
 }
 
 /* MENU OPTIONS TO DO */
