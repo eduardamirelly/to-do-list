@@ -1,5 +1,3 @@
-
-
 import Button from '../Button'
 import { Trash } from 'phosphor-react'
 

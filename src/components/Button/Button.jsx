@@ -1,5 +1,3 @@
-
-
 function Button({ icon, text, handleAction }) {
   return (
     <>

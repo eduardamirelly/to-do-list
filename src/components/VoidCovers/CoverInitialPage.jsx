@@ -1,4 +1,3 @@
-
 import CoverInitialPageImage from '../../assets/illustrations/cover-initial-page.svg'
 
 function CoverInitialPage() {

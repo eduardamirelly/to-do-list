@@ -1,5 +1,4 @@
 import { Trash } from 'phosphor-react'
-
 import { useState } from 'react'
 import { autoResize } from '.'
 import CheckboxGradient from '../CheckboxGradient/CheckboxGradient'

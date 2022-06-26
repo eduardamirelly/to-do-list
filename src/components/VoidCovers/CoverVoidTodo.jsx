@@ -1,4 +1,3 @@
-
 import CoverVoidTodoImage from '../../assets/illustrations/cover-void-todo.svg'
 
 function CoverVoidTodo() {

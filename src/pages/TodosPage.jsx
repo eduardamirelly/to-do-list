@@ -1,4 +1,3 @@
-
 import HeaderPage from '../components/Header/HeaderPage'
 import CheckboxTodo from '../components/CheckboxTodo/CheckboxTodo'
 import ButtonAddTodo from '../components/Button/Buttons/ButtonAddTodo'
@@ -14,8 +13,6 @@ function TodoPage() {
       </div>
 
       <div className="container">
-        {/* <CoverInitialPage /> */}
-        {/* <ListTodo title="Lista" /> */}
         <CheckboxTodo />
       </div>
 

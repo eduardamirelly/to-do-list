@@ -1,5 +1,3 @@
-
-
 function Option(props) {
   return (
     <div className="option">
