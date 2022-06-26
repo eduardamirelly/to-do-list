@@ -1,4 +1,4 @@
-import React from 'react'
+
 import CoverVoidListsImage from '../../assets/illustrations/cover-void-lists.svg'
 
 function CoverVoidLists() {

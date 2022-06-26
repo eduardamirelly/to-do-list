@@ -1,4 +1,4 @@
-import React from 'react'
+
 import CoverInitialPageImage from '../../assets/illustrations/cover-initial-page.svg'
 
 function CoverInitialPage() {

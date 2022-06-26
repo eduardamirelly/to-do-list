@@ -1,11 +1,13 @@
-import React from 'react'
 
-function Button(props) {
+
+function Button({ icon, text, handleAction }) {
   return (
-    <div className="btn">
-      { props.icon }
-      <p>{ props.text }</p>
-    </div>
+    <>
+      <button className="btn" onClick={handleAction}>
+        { icon }
+        { text }
+      </button>
+    </>
   )
 }
 

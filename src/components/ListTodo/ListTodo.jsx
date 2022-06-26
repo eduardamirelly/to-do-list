@@ -1,5 +1,5 @@
 import { CaretRight } from 'phosphor-react'
-import React from 'react'
+
 import ListTrash from './ListTrash'
 
 function ListTodo(props) {

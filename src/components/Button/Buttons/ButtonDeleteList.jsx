@@ -1,4 +1,4 @@
-import React from 'react'
+
 
 import Button from '../Button'
 import { Trash } from 'phosphor-react'

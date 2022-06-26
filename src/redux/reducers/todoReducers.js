@@ -9,7 +9,13 @@ const initialState = {
 export default function todoReducers(state=initialState, action) {
   switch (action.type){
     case actionTypes.ADD_TODO:
-      return state;
+      const newTodo = {
+        text: action.text,
+      }
+      return {
+        ...state,
+        newTodo
+      }
 
     default:
       return state;
