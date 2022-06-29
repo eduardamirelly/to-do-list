@@ -22,3 +22,12 @@ export const editTodo = (id, text, checked) => {
     },
   }
 }
+
+export const deleteTodo = (id) => {
+  return {
+    type: actionTypes.DELETE_TODO,
+    payload: {
+      id,
+    },
+  }
+}

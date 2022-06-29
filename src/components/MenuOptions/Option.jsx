@@ -1,8 +1,8 @@
-function Option(props) {
+function Option({ icon, text, handleAction }) {
   return (
-    <div className="option">
-      { props.icon }
-      { props.text }
+    <div className="option" onClick={handleAction}>
+      { icon }
+      { text }
     </div>
   )
 }

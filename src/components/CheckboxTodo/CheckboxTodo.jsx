@@ -6,24 +6,26 @@ import MenuOptions from '../MenuOptions/MenuOptions'
 import Option from '../MenuOptions/Option'
 
 import { useDispatch } from 'react-redux'
-import { editTodo } from '../../redux/actions/todoActions'
+import { deleteTodo, editTodo } from '../../redux/actions/todoActions'
 
 function CheckboxTodo({ id, text, checked }) {
   const dispatch = useDispatch();
 
-  function handleInputHeightText(textarea) {
-    autoResize(textarea);
-  }
   
   function handleInputText(newTextInput) {
-    console.log(id);
-    console.log(newTextInput);
-
     dispatch(editTodo(
       id,
       newTextInput,
       checked
     ));
+  }
+
+  function handleDeleteTodo() {
+    dispatch(deleteTodo(id));
+  }
+    
+  function handleInputHeightText(textarea) {
+    autoResize(textarea);
   }
 
   function handleEditableText(event, textarea) {
@@ -55,7 +57,7 @@ function CheckboxTodo({ id, text, checked }) {
       </div>
 
       <MenuOptions>
-        <Option icon={<Trash size={18} weight="regular" />} text="Delete" />
+        <Option icon={<Trash size={18} weight="regular" />} text="Delete" handleAction={handleDeleteTodo} />
       </MenuOptions>
     </div>
   )
