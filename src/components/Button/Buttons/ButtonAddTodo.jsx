@@ -1,9 +1,15 @@
 import Button from '../Button'
 import CheckPlus from '../../icons/CheckPlus'
 
+import { useDispatch } from 'react-redux'
+import { addTodo } from '../../../redux/actions/todoActions';
+
 function ButtonAddTodo() {
+
+  const dispatch = useDispatch();
+
   function handleAddNewTodo() {
-    console.log("Add new todo!");
+    dispatch(addTodo());
   }
 
   return (

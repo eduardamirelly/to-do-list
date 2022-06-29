@@ -1,12 +1,13 @@
 import { actionTypes } from "./actionsTypes"
 
 let nextTodoId = 0;
-export const addTodo = (text) => {
+export const addTodo = () => {
   return {
     type: actionTypes.ADD_TODO,
     payload: {
       id: nextTodoId++,
-      text
+      text: '',
+      checked: false,
     },
   }
 }

@@ -5,9 +5,8 @@ import CheckboxGradient from '../CheckboxGradient/CheckboxGradient'
 import MenuOptions from '../MenuOptions/MenuOptions'
 import Option from '../MenuOptions/Option'
 
-function CheckboxTodo() {
-
-  const [todoText, setTodoText] = useState('');
+function CheckboxTodo({ text }) {
+  const [todoText, setTodoText] = useState(text);
 
   function handleInputHeightText(textarea) {
     autoResize(textarea);

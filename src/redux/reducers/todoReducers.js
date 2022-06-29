@@ -1,22 +1,25 @@
 import { actionTypes } from "../actions/actionsTypes";
 
 const initialState = {
-  id: null,
-  text: '',
-  checked: false,
-}
+  todos: [
+    {
+      id: 0,
+      text: '',
+      checked: false,
+    }
+  ]
+};
 
 export default function todoReducers(state=initialState, action) {
   switch (action.type){
     case actionTypes.ADD_TODO:
-      const newTodo = {
-        text: action.text,
-      }
       return {
         ...state,
-        newTodo
+        todos: [
+          ...state.todos,
+          action.payload
+        ]
       }
-
     default:
       return state;
   }
