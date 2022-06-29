@@ -5,15 +5,25 @@ import CheckboxGradient from '../CheckboxGradient/CheckboxGradient'
 import MenuOptions from '../MenuOptions/MenuOptions'
 import Option from '../MenuOptions/Option'
 
-function CheckboxTodo({ text }) {
-  const [todoText, setTodoText] = useState(text);
+import { useDispatch } from 'react-redux'
+import { editTodo } from '../../redux/actions/todoActions'
+
+function CheckboxTodo({ id, text, checked }) {
+  const dispatch = useDispatch();
 
   function handleInputHeightText(textarea) {
     autoResize(textarea);
   }
   
-  function handleInputText(text) {
-    setTodoText(text);
+  function handleInputText(newTextInput) {
+    console.log(id);
+    console.log(newTextInput);
+
+    dispatch(editTodo(
+      id,
+      newTextInput,
+      checked
+    ));
   }
 
   function handleEditableText(event, textarea) {
@@ -38,7 +48,7 @@ function CheckboxTodo({ text }) {
           onChange={(e) => handleInputText(e.target.value)}
           onKeyDown={(e) => handleEditableText(e, e.target)}
           onClick={(e) => handleActiveInputText(e.target)}
-          value={todoText}
+          value={text}
           rows="1"
         >
         </textarea>

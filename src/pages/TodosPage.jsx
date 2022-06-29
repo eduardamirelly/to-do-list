@@ -19,8 +19,8 @@ function TodosPage() {
 
       <div className="container">
         {
-          todos.map((todo) => (
-            <CheckboxTodo text={todo.text} />
+          todos.map((todo, index) => (
+            <CheckboxTodo key={index} id={todo.id} text={todo.text} checked={todo.checked} />
           ))
         }
       </div>
