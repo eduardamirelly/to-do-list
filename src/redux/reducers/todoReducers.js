@@ -26,9 +26,11 @@ export default function todoReducers(state=initialState, action) {
       return {
         ...state,
         todos: [
+          ...state.todos.filter((todoElem) => todoElem.id !== action.payload.id),
           action.payload
         ]
       }
+
     case actionTypes.DELETE_TODO:
       //Filter one state with different id and this return undefined
       return {
