@@ -1,5 +1,4 @@
 import { Trash } from 'phosphor-react'
-import { useState } from 'react'
 import { autoResize } from '.'
 import CheckboxGradient from '../CheckboxGradient/CheckboxGradient'
 import MenuOptions from '../MenuOptions/MenuOptions'
@@ -12,7 +11,6 @@ function CheckboxTodo({ id, text, checked }) {
   const dispatch = useDispatch();
   
   function handleInputText(newTextInput) {
-    // console.log(id)
     dispatch(editTodo(
       id,
       newTextInput,
