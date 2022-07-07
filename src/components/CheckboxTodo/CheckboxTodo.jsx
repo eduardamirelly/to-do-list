@@ -10,13 +10,13 @@ import { deleteTodo, editTodo } from '../../redux/actions/todoActions'
 
 function CheckboxTodo({ id, text, checked }) {
   const dispatch = useDispatch();
-
   
   function handleInputText(newTextInput) {
+    // console.log(id)
     dispatch(editTodo(
       id,
       newTextInput,
-      checked
+      // checked
     ));
   }
 

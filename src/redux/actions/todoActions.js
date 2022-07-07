@@ -12,13 +12,13 @@ export const addTodo = () => {
   }
 }
 
-export const editTodo = (id, text, checked) => {
+export const editTodo = (id, text) => {
   return {
     type: actionTypes.EDIT_TODO,
     payload: {
       id,
       text,
-      checked,
+      // checked,
     },
   }
 }

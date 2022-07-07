@@ -1,19 +1,12 @@
 import { actionTypes } from "../actions/actionsTypes";
 
 const initialState = {
-  todos: [
-    // {
-    //   id: 0,
-    //   text: '',
-    //   checked: false,
-    // }
-  ]
+  todos: []
 };
 
-export default function todoReducers(state=initialState, action) {
+export default function todos(state=initialState, action) {
   switch (action.type){
     case actionTypes.ADD_TODO:
-      //State Evolution, old to new state
       return {
         ...state,
         todos: [
@@ -22,17 +15,23 @@ export default function todoReducers(state=initialState, action) {
         ]
       }
     case actionTypes.EDIT_TODO:
-      //Get the state and replace the todo[id] with the same id
+      const todoEdited = state.todos.map((todo) => {
+        console.log(todo);
+        if(todo.id === action.payload.id) {
+          return {
+            ...todo,
+            text: action.payload.text,
+          }
+        }
+        return todo;
+      })
+
       return {
-        ...state,
-        todos: [
-          ...state.todos.filter((todoElem) => todoElem.id !== action.payload.id),
-          action.payload
-        ]
+        ...state, 
+        todos: todoEdited
       }
 
     case actionTypes.DELETE_TODO:
-      //Filter one state with different id and this return undefined
       return {
         ...state,
         todos: state.todos.filter((todoElem) => todoElem.id !== action.payload.id)
