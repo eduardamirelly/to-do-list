@@ -1,6 +1,6 @@
 function CheckboxGradient() {
   return (
-    <>
+    <div className="hover:bg-dark-800 bg-transparent transition-all rounded-full p-3 mx-auto cursor-pointer">
       <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
         <rect x="1" y="1" width="22" height="22" rx="4" stroke="url(#paint0_linear_118_1217)" strokeWidth="2"/>
         <defs>
@@ -11,7 +11,7 @@ function CheckboxGradient() {
           </linearGradient>
         </defs>
       </svg>
-    </>
+    </div>
   )
 }
 
