@@ -44,7 +44,7 @@
 
 .to-do {
   @apply bg-dark-800 hover:bg-dark-700 text-second-200 sm:text-md text-sm font-normal rounded-sm;
-  @apply w-full pr-6 pl-4 py-3 mb-5 flex items-center justify-between;
+  @apply w-full px-6 py-3 mb-5 flex items-center justify-between;
 }
 
 .to-do .to-do-content {
@@ -53,6 +53,68 @@
 
 .to-do .to-do-content textarea {
   @apply resize-none bg-transparent overflow-hidden outline-none leading-6 py-2 w-full;
+}
+
+/* CHECKBOX GRADIENT */
+
+#checkbox {
+  -webkit-appearance: none;
+  outline: none;
+}
+
+.check {
+  cursor: pointer;
+  position: relative;
+  width: 24px;
+  height: 24px;
+  -webkit-tap-highlight-color: transparent;
+  transform: translate3d(0,0,0);
+}
+
+.check::before {
+  content: '';
+  position: absolute;
+
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 48px;
+  height: 48px;
+  
+  border-radius: 50%;
+  opacity: 0;
+  @apply bg-dark-900;
+  transition: opacity .2s ease;
+}
+
+.check:hover::before{
+  opacity: .5;
+}
+
+.check .svg-checkbox {
+  z-index: 1;
+  position: relative;
+}
+
+.check .svg-checkbox .rect {
+  stroke-dasharray: 115;
+  stroke-dashoffset: 0;
+}
+
+.check .svg-checkbox .result {
+  stroke-dasharray: 38;
+  stroke-dashoffset: 38;
+}
+
+#checkbox:checked + .check .svg-checkbox .rect {
+  stroke-dashoffset: 115;
+  transition: all .3s linear;
+}
+
+#checkbox:checked + .check .svg-checkbox .result {
+  stroke-dashoffset: 76;
+  transition: all .2s linear;
+  transition-delay: .15s
 }
 
 /* MENU OPTIONS TO DO */
