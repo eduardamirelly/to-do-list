@@ -16,7 +16,6 @@ export default function todos(state=initialState, action) {
       }
     case actionTypes.EDIT_TODO:
       const todoEdited = state.todos.map((todo) => {
-        console.log(todo);
         if(todo.id === action.payload.id) {
           return {
             ...todo,

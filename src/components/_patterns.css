@@ -57,43 +57,29 @@
 
 /* CHECKBOX GRADIENT */
 
-#checkbox {
+input[type="checkbox"] {
   -webkit-appearance: none;
-  outline: none;
+  @apply pointer-events-none hidden;
 }
 
 .check {
-  cursor: pointer;
-  position: relative;
-  width: 24px;
-  height: 24px;
   -webkit-tap-highlight-color: transparent;
-  transform: translate3d(0,0,0);
+  @apply cursor-pointer relative w-6 h-6 mr-4;
 }
 
 .check::before {
   content: '';
-  position: absolute;
-
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 48px;
-  height: 48px;
-  
-  border-radius: 50%;
-  opacity: 0;
-  @apply bg-dark-900;
+  @apply absolute top-2/4 left-2/4 -translate-x-2/4 -translate-y-2/4 w-12 h-12;
+  @apply bg-dark-900 rounded-full opacity-0;
   transition: opacity .2s ease;
 }
 
 .check:hover::before{
-  opacity: .5;
+  @apply opacity-50;
 }
 
 .check .svg-checkbox {
-  z-index: 1;
-  position: relative;
+  @apply relative z-10;
 }
 
 .check .svg-checkbox .rect {
@@ -106,12 +92,12 @@
   stroke-dashoffset: 38;
 }
 
-#checkbox:checked + .check .svg-checkbox .rect {
+input[type="checkbox"].checked + .check .svg-checkbox .rect {
   stroke-dashoffset: 115;
   transition: all .3s linear;
 }
 
-#checkbox:checked + .check .svg-checkbox .result {
+input[type="checkbox"].checked + .check .svg-checkbox .result {
   stroke-dashoffset: 76;
   transition: all .2s linear;
   transition-delay: .15s

@@ -1,5 +1,5 @@
 import HeaderPage from '../components/Header/HeaderPage'
-import CheckboxTodo from '../components/CheckboxTodo/CheckboxTodo'
+import Todo from '../components/Todo'
 import ButtonAddTodo from '../components/Button/Buttons/ButtonAddTodo'
 
 import { useSelector } from 'react-redux'
@@ -20,7 +20,7 @@ function TodosPage() {
       <div className="container">
         {
           todos.map((todo, index) => (
-            <CheckboxTodo key={index} id={todo.id} text={todo.text} checked={todo.checked} />
+            <Todo key={index} id={todo.id} text={todo.text} checked={todo.checked} />
           ))
         }
       </div>
