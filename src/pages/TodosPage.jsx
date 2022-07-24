@@ -1,4 +1,4 @@
-import HeaderPage from '../components/Header/HeaderPage'
+import HeaderPage from '../components/HeaderPage'
 import Todo from '../components/Todo'
 import ButtonAddTodo from '../components/Button/Buttons/ButtonAddTodo'
 
