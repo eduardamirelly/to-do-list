@@ -1,4 +1,4 @@
-import Button from '../Button'
+import Button from '..'
 import { PlusCircle } from 'phosphor-react'
 
 function ButtonAddList() {

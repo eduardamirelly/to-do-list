@@ -1,4 +1,4 @@
-import Button from '../Button'
+import Button from '..'
 import { Trash } from 'phosphor-react'
 
 function ButtonDeleteList() {

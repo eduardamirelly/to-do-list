@@ -1,6 +1,6 @@
 import HeaderPage from '../components/HeaderPage'
-import Todo from '../components/Todo'
-import ButtonAddTodo from '../components/Button/Buttons/ButtonAddTodo'
+import Todo from '../components/Todo' 
+import ButtonAddTodo from '../components/Button/ButtonAddTodo'
 
 import { useSelector } from 'react-redux'
 
