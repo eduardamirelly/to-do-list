@@ -2,7 +2,7 @@ import { Trash } from 'phosphor-react'
 import CheckboxGradient from './components/CheckboxGradient'
 import MenuOptions from '../MenuOptions'
 import Option from '../MenuOptions/components/Option'
-import TextareaInput from '../TextareaInput'
+import TextareaInput from '../TextInput'
 
 import { useDispatch } from 'react-redux'
 import { addTodo, deleteTodo, editTodo } from '../../redux/actions/todoActions'
@@ -35,7 +35,6 @@ function Todo({ id, text, checked }) {
   }, [dispatch]);
 
   const handleKeyEnter = useCallback((event) => {
-    // console.log(event);
     if(event.keyCode === 13) {
       dispatch(addTodo());
     }

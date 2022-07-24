@@ -3,6 +3,7 @@ import Todo from '../components/Todo'
 import ButtonAddTodo from '../components/Button/ButtonAddTodo'
 
 import { useSelector } from 'react-redux'
+import ListTodo from '../components/ListTodo';
 
 function TodosPage() {
   
@@ -18,6 +19,7 @@ function TodosPage() {
       </div>
 
       <div className="container">
+        <ListTodo />
         {
           todos.map((todo, index) => (
             <Todo key={index} id={todo.id} text={todo.text} checked={todo.checked} />

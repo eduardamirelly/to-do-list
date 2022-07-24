@@ -18,6 +18,12 @@
   @apply mr-3;
 }
 
+/* TEXTAREA */
+
+.textarea-input {
+  @apply bg-transparent overflow-hidden outline-none leading-6 py-2 w-full;
+}
+
 /* LIST TO DO */
 
 .list {
@@ -49,10 +55,6 @@
 
 .to-do .to-do-content {
   @apply flex items-center w-full;
-}
-
-.to-do .to-do-content textarea {
-  @apply resize-none bg-transparent overflow-hidden outline-none leading-6 py-2 w-full;
 }
 
 /* CHECKBOX GRADIENT */
