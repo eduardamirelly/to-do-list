@@ -2,6 +2,7 @@ import { Trash } from 'phosphor-react'
 import CheckboxGradient from './components/CheckboxGradient'
 import MenuOptions from '../MenuOptions'
 import Option from '../MenuOptions/components/Option'
+import TextareaInput from '../TextareaInput'
 
 import { useDispatch } from 'react-redux'
 import { addTodo, deleteTodo, editTodo } from '../../redux/actions/todoActions'
@@ -45,15 +46,11 @@ function Todo({ id, text, checked }) {
       <div className="to-do-content">
         <CheckboxGradient />
 
-        {/* //separate this code on new component */}
-        <textarea
-          onChange={handleInputText}
-          onKeyDown={handleKeyEnter}
-          value={textTodo}
-          rows="1"
-          autoFocus
-        >
-        </textarea>
+        <TextareaInput
+          handleInput={handleInputText}
+          handleKeyEnter={handleKeyEnter}
+          text={textTodo}
+        />
       </div>
 
       <MenuOptions>
