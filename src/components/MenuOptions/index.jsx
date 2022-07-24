@@ -5,8 +5,12 @@ function MenuOptions(props) {
 
   const [isOpenMenu, setIsOpenMenu] = useState(false);
 
+  const handleMenuOptions = () => {
+    setIsOpenMenu(!isOpenMenu);
+  }
+
   return (
-    <div className="menu-options" onClick={() => { setIsOpenMenu(!isOpenMenu) }}>
+    <div className="menu-options" onClick={handleMenuOptions}>
       <DotsThreeVertical size={24} weight="regular" />
 
       { isOpenMenu ? 

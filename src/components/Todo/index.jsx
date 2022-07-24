@@ -9,10 +9,11 @@ import { addTodo, deleteTodo, editTodo } from '../../redux/actions/todoActions'
 import { useState } from 'react'
 import { useCallback } from 'react'
 
-function Todo({ id, text, checked }) {
+function Todo({ id }) {
   const dispatch = useDispatch();
-
+  
   const [textTodo, setTextTodo] = useState('');
+  const [isChecked, setIsChecked] = useState(false);
 
   const autoResize = (textarea) => {
     textarea.style.height = 'auto';
@@ -26,9 +27,20 @@ function Todo({ id, text, checked }) {
     dispatch(editTodo(
       id,
       textTodo,
-      // checked
+      isChecked
     ));
-  }, [dispatch, textTodo]);
+  }, [dispatch, textTodo, isChecked]);
+
+
+  const handleCheckbox = useCallback(() => {
+    setIsChecked(!isChecked);
+
+    dispatch(editTodo(
+      id,
+      textTodo,
+      isChecked
+    ));
+  }, [dispatch, textTodo, isChecked]);
 
   const handleDeleteTodo = useCallback(() => {
     dispatch(deleteTodo(id));
@@ -43,7 +55,10 @@ function Todo({ id, text, checked }) {
   return (
     <div className="to-do">
       <div className="to-do-content">
-        <CheckboxGradient />
+        <CheckboxGradient 
+          handleCheckbox={handleCheckbox} 
+          isChecked={isChecked} 
+        />
 
         <TextareaInput
           handleInput={handleInputText}

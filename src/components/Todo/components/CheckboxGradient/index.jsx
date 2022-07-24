@@ -1,12 +1,4 @@
-import { useState } from "react"
-
-function CheckboxGradient() {
-
-  const [isChecked, setIsChecked] = useState(false);
-
-  const handleCheckbox = () => {
-    setIsChecked(!isChecked);
-}
+function CheckboxGradient({ handleCheckbox, isChecked }) {
 
   return (
     <>

@@ -108,7 +108,7 @@ input[type="checkbox"].checked + .check .svg-checkbox .result {
 /* MENU OPTIONS TO DO */
 
 .menu-options {
-  @apply cursor-pointer hover:bg-dark-700 p-2 rounded-full relative;
+  @apply cursor-pointer hover:bg-dark-800 p-2 rounded-full relative;
 }
 
 .menu-toggle {

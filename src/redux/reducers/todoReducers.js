@@ -20,6 +20,7 @@ export default function todos(state=initialState, action) {
           return {
             ...todo,
             text: action.payload.text,
+            checked: action.payload.checked,
           }
         }
         return todo;
