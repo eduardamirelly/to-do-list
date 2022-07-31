@@ -12,7 +12,7 @@ function TodosPage() {
     <div className="flex flex-col items-center bg-dark-900 w-full min-h-[100vh] px-4 py-4">
 
       <div className="container">
-        <HeaderPage>
+        <HeaderPage title="Your Todo's">
           <ButtonAddTodo />
         </HeaderPage>
       </div>
