@@ -8,6 +8,7 @@ import { useDispatch } from 'react-redux'
 import { addTodo, deleteTodo, editTodo } from '../../redux/actions/todoActions'
 import { useState } from 'react'
 import { useCallback } from 'react'
+import { useEffect } from 'react'
 
 function Todo({ id }) {
   const dispatch = useDispatch();
@@ -23,24 +24,20 @@ function Todo({ id }) {
   const handleInputText = useCallback((event) => {
     setTextTodo(event.target.value);
     autoResize(event.target);
-
-    dispatch(editTodo(
-      id,
-      textTodo,
-      isChecked
-    ));
-  }, [dispatch, textTodo, isChecked]);
+  }, [dispatch, textTodo]);
 
 
   const handleCheckbox = useCallback(() => {
     setIsChecked(!isChecked);
+  }, [dispatch, isChecked]);
 
+  useEffect(() => {
     dispatch(editTodo(
-      id,
-      textTodo,
+      id, 
+      textTodo, 
       isChecked
     ));
-  }, [dispatch, textTodo, isChecked]);
+  }, [isChecked, textTodo])
 
   const handleDeleteTodo = useCallback(() => {
     dispatch(deleteTodo(id));
