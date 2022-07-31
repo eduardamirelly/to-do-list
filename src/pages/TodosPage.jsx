@@ -19,8 +19,8 @@ function TodosPage() {
 
       <div className="container">
         {
-          todos.map((todo, index) => (
-            <Todo key={index} id={todo.id} text={todo.text} checked={todo.checked} />
+          todos.map((todo) => (
+            <Todo key={todo.id} id={todo.id} text={todo.text} checked={todo.checked} />
           ))
         }
       </div>
