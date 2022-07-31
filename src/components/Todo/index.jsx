@@ -47,7 +47,10 @@ function Todo({ id }) {
     if(event.keyCode === 13) {
       dispatch(addTodo());
     }
-  }, [dispatch]);
+    else if(event.keyCode === 8 && textTodo.length === 0) {
+      dispatch(deleteTodo(id));
+    }
+  }, [dispatch, textTodo]);
     
   return (
     <div className="to-do">
