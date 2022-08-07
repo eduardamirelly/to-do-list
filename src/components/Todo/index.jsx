@@ -2,7 +2,7 @@ import CheckboxGradient from './components/CheckboxGradient'
 import TextareaInput from '../TextInput'
 
 import { useDispatch } from 'react-redux'
-import { addTodo, deleteTodo, editTodo } from '../../redux/actions/todoActions'
+import { addTodo, deleteTodo, editTodo } from '../../redux/actions/todoListActions'
 import { useState } from 'react'
 import { useCallback } from 'react'
 import { useEffect } from 'react'

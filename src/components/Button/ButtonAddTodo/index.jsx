@@ -2,7 +2,7 @@ import Button from '..'
 import CheckPlus from '../../icons/CheckPlus'
 
 import { useDispatch } from 'react-redux'
-import { addTodo } from '../../../redux/actions/todoActions';
+import { addTodo } from '../../../redux/actions/todoListActions';
 
 function ButtonAddTodo() {
 
