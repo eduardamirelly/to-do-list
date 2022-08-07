@@ -5,35 +5,42 @@ import ListTrash from './ListTrash'
 
 import { useCallback } from 'react'
 import { useState } from 'react'
+import { useEffect } from 'react'
+import { useDispatch } from 'react-redux'
+import { deleteList, editList } from '../../redux/actions/todoListActions'
 
-function ListTodo(props) {
+function ListTodo({ id }) {
 
-  const [textList, setTextList] = useState('');
+  const dispatch = useDispatch();
+
+  const [titleList, setTitleList] = useState('');
 
   const handleInputText = useCallback((event) => {
-    setTextList(event.target.value);
+    setTitleList(event.target.value);
   }, []);
 
   const handleDeleteList = useCallback(() => {
-    //
+    dispatch(deleteList(id));
   }, []);
 
   const handleKeyEnter = useCallback((event) => {
     //
   }, []);
 
+  useEffect(() => {
+    dispatch(editList(id, titleList));
+  }, [titleList]);
 
   return (
     <div className="list">
-      <ListTrash />
+      <ListTrash handleAction={handleDeleteList} />
 
       <TextareaInput 
         handleInput={handleInputText}
         handleKeyEnter={handleKeyEnter}
-        text={textList}
+        text={titleList}
       />
-      
-      { props.title }
+
       <CaretRight size={32} weight="regular" />
     </div>
   )

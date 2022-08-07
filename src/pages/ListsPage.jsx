@@ -1,12 +1,14 @@
 import HeaderPage from '../components/HeaderPage'
-import Todo from '../components/Todo' 
 import ButtonAddList from '../components/Button/ButtonAddList'
 
 import { useSelector } from 'react-redux'
+import ListTodo from '../components/ListTodo';
+import { useCallback } from 'react';
+import { useParams } from 'react-router-dom';
 
 function ListsPage() {
   
-  // const lists = useSelector((state) => state.todoReducers.todos);
+  const lists = useSelector((state) => state.todoList.lists);
 
   return (
     <div className="flex flex-col items-center bg-dark-900 w-full min-h-[100vh] px-4 py-4">
@@ -18,11 +20,11 @@ function ListsPage() {
       </div>
 
       <div className="container">
-        {/* {
-          lists.map((lists) => (
-            <Todo key={list.id} id={list.id} text={list.text} checked={list.checked} />
+        {
+          lists.map((list) => (
+            <ListTodo key={list.id} id={list.id} title={list.title} />
           ))
-        } */}
+        }
       </div>
 
     </div>

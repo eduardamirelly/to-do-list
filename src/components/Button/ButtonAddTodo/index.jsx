@@ -3,14 +3,15 @@ import CheckPlus from '../../icons/CheckPlus'
 
 import { useDispatch } from 'react-redux'
 import { addTodo } from '../../../redux/actions/todoListActions';
+import { useCallback } from 'react';
 
 function ButtonAddTodo() {
 
   const dispatch = useDispatch();
 
-  function handleAddNewTodo() {
+  const handleAddNewTodo = useCallback(() => {
     dispatch(addTodo());
-  }
+  }, []);
 
   return (
     <>

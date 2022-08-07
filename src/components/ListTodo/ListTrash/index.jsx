@@ -1,12 +1,12 @@
 import { Trash } from 'phosphor-react'
 import React, { useState } from 'react'
 
-function ListTrash() {
+function ListTrash({handleAction}) {
 
   const [isHovering, setIsHovering] = useState(false);
 
   return (
-    <div className="option-trash" 
+    <div onClick={handleAction} className="option-trash" 
       onMouseEnter={() => { setIsHovering(true) }}
       onMouseLeave={() => {setIsHovering(false) }}
     >

@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
 import store from './redux/store'
 
-// import TodosPage from './pages/TodosPage';
+import TodosPage from './pages/TodosPage';
 import ListsPage from './pages/ListsPage';
 
 function App() {
@@ -11,7 +11,11 @@ function App() {
     <Provider store={store}>
       <Router>
         <Routes>
-            <Route path="/" element={ <ListsPage /> } />
+          <Route path="/" element={ <ListsPage /> }>
+            <Route path="lists">
+              <Route path=":listId" element={ <TodosPage /> } />
+            </Route>
+          </Route>
         </Routes>
       </Router>
     </Provider>
