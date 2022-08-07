@@ -1,7 +1,4 @@
-import { Trash } from 'phosphor-react'
 import CheckboxGradient from './components/CheckboxGradient'
-import MenuOptions from '../MenuOptions'
-import Option from '../MenuOptions/components/Option'
 import TextareaInput from '../TextInput'
 
 import { useDispatch } from 'react-redux'
@@ -9,6 +6,7 @@ import { addTodo, deleteTodo, editTodo } from '../../redux/actions/todoActions'
 import { useState } from 'react'
 import { useCallback } from 'react'
 import { useEffect } from 'react'
+import TrashButton from '../TrashButton'
 
 function Todo({ id }) {
   const dispatch = useDispatch();
@@ -67,9 +65,7 @@ function Todo({ id }) {
         />
       </div>
 
-      <MenuOptions>
-        <Option icon={<Trash size={18} weight="regular" />} text="Delete" handleAction={handleDeleteTodo} />
-      </MenuOptions>
+      <TrashButton handleAction={handleDeleteTodo} />
     </div>
   )
 }
