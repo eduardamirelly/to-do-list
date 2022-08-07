@@ -8,6 +8,7 @@ import { useState } from 'react'
 import { useEffect } from 'react'
 import { useDispatch } from 'react-redux'
 import { deleteList, editList } from '../../redux/actions/todoListActions'
+import { Link } from 'react-router-dom'
 
 function ListTodo({ id }) {
 
@@ -41,7 +42,9 @@ function ListTodo({ id }) {
         text={titleList}
       />
 
-      <CaretRight size={32} weight="regular" />
+      <Link to={"/lists/" + id} className="hover:text-primary">
+        <CaretRight size={32} weight="regular" />
+      </Link>
     </div>
   )
 }

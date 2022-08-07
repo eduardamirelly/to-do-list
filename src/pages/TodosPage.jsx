@@ -3,11 +3,19 @@ import Todo from '../components/Todo'
 import ButtonAddTodo from '../components/Button/ButtonAddTodo'
 
 import { useSelector } from 'react-redux'
+import { useParams } from 'react-router-dom'
 
 function TodosPage() {
   
   // const todos = useSelector((state) => state.todoList.lists);
   const { listId } = useParams();
+
+  console.log(listId);
+
+  // const lists = useSelector((state) => state.lists);
+  // console.log(typeof lists);
+
+  // const listClicked = lists.filter((list) => list.id === listId);
 
   return (
     <div className="flex flex-col items-center bg-dark-900 w-full min-h-[100vh] px-4 py-4">

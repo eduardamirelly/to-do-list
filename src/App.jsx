@@ -11,10 +11,9 @@ function App() {
     <Provider store={store}>
       <Router>
         <Routes>
-          <Route path="/" element={ <ListsPage /> }>
-            <Route path="lists">
-              <Route path=":listId" element={ <TodosPage /> } />
-            </Route>
+          <Route path="/" element={ <ListsPage /> } />
+          <Route path="lists">
+            <Route path=":listId" element={ <TodosPage /> }/>
           </Route>
         </Routes>
       </Router>
