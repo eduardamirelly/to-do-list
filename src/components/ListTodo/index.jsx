@@ -10,14 +10,12 @@ import { useDispatch } from 'react-redux'
 import { deleteList, editList } from '../../redux/actions/todoListActions'
 import { Link } from 'react-router-dom'
 
-function ListTodo({ id }) {
+function ListTodo({ id, title }) {
 
   const dispatch = useDispatch();
 
-  const [titleList, setTitleList] = useState('');
-
   const handleInputText = useCallback((event) => {
-    setTitleList(event.target.value);
+    dispatch(editList(id, event.target.value));
   }, []);
 
   const handleDeleteList = useCallback(() => {
@@ -28,10 +26,6 @@ function ListTodo({ id }) {
     //
   }, []);
 
-  useEffect(() => {
-    dispatch(editList(id, titleList));
-  }, [titleList]);
-
   return (
     <div className="list">
       <ListTrash handleAction={handleDeleteList} />
@@ -39,7 +33,7 @@ function ListTodo({ id }) {
       <TextareaInput 
         handleInput={handleInputText}
         handleKeyEnter={handleKeyEnter}
-        text={titleList}
+        text={title}
       />
 
       <Link to={"/lists/" + id} className="hover:text-primary">

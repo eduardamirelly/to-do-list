@@ -7,7 +7,7 @@ function HeaderPage(props) {
         <div className="flex justify-between items-center gap-4">
           {props.isReturn && <ReturnButton />}
           <h1 className="title-header">
-            To do | {props.title}
+            {props.title}
           </h1>
         </div>
         { props.children }

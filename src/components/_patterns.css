@@ -128,5 +128,5 @@ input[type="checkbox"].checked + .check .svg-checkbox .result {
 /* TEXTS AND TITLES */
 
 .title-header {
-  @apply text-2xl text-second-100 font-semibold uppercase text-center;
+  @apply text-xl text-second-100 font-semibold uppercase text-center;
 }
