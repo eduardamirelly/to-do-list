@@ -1,5 +1,6 @@
 import HeaderPage from '../components/HeaderPage'
 import ButtonAddList from '../components/Button/ButtonAddList'
+import CoverFirstAccess from '../components/VoidCovers/CoverFirstAccess'
 import CoverVoidLists from '../components/VoidCovers/CoverVoidLists'
 
 import { useSelector } from 'react-redux'
@@ -8,7 +9,6 @@ import ListTodo from '../components/ListTodo';
 function ListsPage() {
   
   const lists = useSelector((state) => state.todoList.lists);
-
   return (
     <div className="flex flex-col items-center bg-dark-900 w-full min-h-[100vh] px-4 py-4">
 
@@ -20,7 +20,13 @@ function ListsPage() {
 
       <div className="container">
         {lists.length < 1 ? (
-          <CoverVoidLists />
+          localStorage.getItem('TODO_LIST_FIRST_ACCESS') === 'true' ? (
+            <CoverFirstAccess />
+          )
+          :
+          (
+            <CoverVoidLists />
+          )
         )
         :
         (

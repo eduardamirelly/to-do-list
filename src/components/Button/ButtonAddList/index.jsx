@@ -13,6 +13,10 @@ function ButtonAddList() {
     dispatch(addList());
   }, []);
 
+  if(localStorage.getItem('TODO_LIST_FIRST_ACCESS') === 'true') {
+    localStorage.setItem('TODO_LIST_FIRST_ACCESS', false);
+  }
+
   return (
     <>
       <Button icon={<PlusCircle size={24} weight="regular" />} text="Add new List" handleAction={handleAddNewList} />

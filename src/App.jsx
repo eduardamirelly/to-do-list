@@ -8,6 +8,11 @@ import TodosPage from './pages/TodosPage';
 import ListsPage from './pages/ListsPage';
 
 function App() {
+
+  if(!localStorage.getItem('TODO_LIST_FIRST_ACCESS')) {
+    localStorage.setItem('TODO_LIST_FIRST_ACCESS', true);
+  }
+
   return (
     <Provider store={store}>
       <PersistGate loading={null} persistor={persistor}>
