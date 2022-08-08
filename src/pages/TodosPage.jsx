@@ -13,7 +13,7 @@ function TodosPage() {
   const listClicked = lists.filter((list) => list.id.toString() === listId)[0];
   
   return (
-    <div className="flex flex-col items-center bg-dark-900 w-full min-h-[100vh] px-4 py-4">
+    <div className="flex flex-col items-center w-full min-h-[100vh] px-4 py-4">
 
       <div className="container">
         <HeaderPage title={listClicked.title} isReturn={true}>

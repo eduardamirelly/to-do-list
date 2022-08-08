@@ -37,9 +37,9 @@ function Todo({ id, listId, text, checked }) {
       listId,
       id, 
       textTodo, 
-      !checked,
+      !isChecked,
     ));
-  }, [dispatch, isChecked]);
+  }, [dispatch, isChecked, textTodo]);
 
   const handleDeleteTodo = useCallback(() => {
     dispatch(deleteTodo(id, listId));
