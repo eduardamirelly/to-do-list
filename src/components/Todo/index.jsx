@@ -11,6 +11,7 @@ function Todo({ id, listId, text, checked }) {
   const dispatch = useDispatch();
   
   const [textTodo, setTextTodo] = useState(text);
+  const [isChecked, setIsChecked] = useState(checked);
 
   const autoResize = (textarea) => {
     textarea.style.height = 'auto';
@@ -25,19 +26,20 @@ function Todo({ id, listId, text, checked }) {
       listId,
       id, 
       event.target.value, 
-      checked,
+      isChecked,
     ));
   }, [dispatch, textTodo]);
 
 
   const handleCheckbox = useCallback(() => {
+    setIsChecked(!isChecked);
     dispatch(editTodo(
       listId,
       id, 
       textTodo, 
       !checked,
     ));
-  }, [dispatch]);
+  }, [dispatch, isChecked]);
 
   const handleDeleteTodo = useCallback(() => {
     dispatch(deleteTodo(id, listId));
