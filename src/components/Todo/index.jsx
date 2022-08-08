@@ -5,14 +5,12 @@ import { useDispatch } from 'react-redux'
 import { addTodo, deleteTodo, editTodo } from '../../redux/actions/todoListActions'
 import { useState } from 'react'
 import { useCallback } from 'react'
-import { useEffect } from 'react'
 import TrashButton from '../TrashButton'
 
 function Todo({ id, listId, text, checked }) {
   const dispatch = useDispatch();
   
   const [textTodo, setTextTodo] = useState(text);
-  const [isChecked, setIsChecked] = useState(checked);
 
   const autoResize = (textarea) => {
     textarea.style.height = 'auto';
@@ -27,7 +25,7 @@ function Todo({ id, listId, text, checked }) {
       listId,
       id, 
       event.target.value, 
-      isChecked,
+      checked,
     ));
   }, [dispatch, textTodo]);
 
@@ -37,9 +35,9 @@ function Todo({ id, listId, text, checked }) {
       listId,
       id, 
       textTodo, 
-      !isChecked,
+      !checked,
     ));
-  }, [dispatch, isChecked]);
+  }, [dispatch]);
 
   const handleDeleteTodo = useCallback(() => {
     dispatch(deleteTodo(id, listId));
@@ -50,7 +48,7 @@ function Todo({ id, listId, text, checked }) {
       dispatch(addTodo(listId));
     }
     else if(event.keyCode === 8 && textTodo.length === 0) {
-      dispatch(deleteTodo(id));
+      dispatch(deleteTodo(id, listId));
     }
   }, [dispatch, textTodo]);
     

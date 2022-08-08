@@ -1,15 +1,12 @@
 import { actionTypes } from "./actionsTypes"
 
-let nextListId = 0;
-let nextTodoId = 0;
-
 // LIST
 
 export const addList = () => {
   return {
     type: actionTypes.ADD_LIST,
     payload: {
-      id: nextListId++,
+      id: Date.now(),
       title: '',
       todos: [],
     }
@@ -43,7 +40,7 @@ export const addTodo = (listId) => {
     payload: {
       id: listId,
       todo: {
-        id: nextTodoId++,
+        id: Date.now(),
         text: '',
         checked: false,
       },
