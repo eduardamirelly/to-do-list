@@ -4,6 +4,7 @@ import ButtonAddTodo from '../components/Button/ButtonAddTodo'
 
 import { useSelector } from 'react-redux'
 import { useParams } from 'react-router-dom'
+import CoverVoidTodo from '../components/VoidCovers/CoverVoidTodo'
 
 function TodosPage() {
   
@@ -21,11 +22,15 @@ function TodosPage() {
       </div>
 
       <div className="container">
-        {
+        {listClicked.todos.length < 1 ? (
+          <CoverVoidTodo />
+        )
+        :
+        (
           listClicked.todos.map((todo) => (
             <Todo key={todo.id} id={todo.id} text={todo.text} checked={todo.checked} listId={listId} />
           ))
-        }
+        )}
       </div>
 
     </div>

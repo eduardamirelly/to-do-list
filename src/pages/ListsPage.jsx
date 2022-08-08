@@ -1,10 +1,9 @@
 import HeaderPage from '../components/HeaderPage'
 import ButtonAddList from '../components/Button/ButtonAddList'
+import CoverVoidLists from '../components/VoidCovers/CoverVoidLists'
 
 import { useSelector } from 'react-redux'
 import ListTodo from '../components/ListTodo';
-import { useCallback } from 'react';
-import { useParams } from 'react-router-dom';
 
 function ListsPage() {
   
@@ -20,11 +19,16 @@ function ListsPage() {
       </div>
 
       <div className="container">
-        {
+        {lists.length < 1 ? (
+          <CoverVoidLists />
+        )
+        :
+        (
           lists.map((list) => (
             <ListTodo key={list.id} id={list.id} title={list.title} />
           ))
-        }
+        )}
+        
       </div>
 
     </div>
