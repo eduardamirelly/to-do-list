@@ -25,6 +25,7 @@ A simple to-do list.
 -   [ ] React
 -   [ ] TailwindCSS
 -   [ ] Redux
+-   [ ] Redux Persist
 
 ## 🚀 Deploy
 
