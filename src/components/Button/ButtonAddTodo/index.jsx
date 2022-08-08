@@ -5,12 +5,12 @@ import { useDispatch } from 'react-redux'
 import { addTodo } from '../../../redux/actions/todoListActions';
 import { useCallback } from 'react';
 
-function ButtonAddTodo() {
+function ButtonAddTodo({ listId }) {
 
   const dispatch = useDispatch();
 
   const handleAddNewTodo = useCallback(() => {
-    dispatch(addTodo());
+    dispatch(addTodo(listId));
   }, []);
 
   return (

@@ -3,36 +3,7 @@ import { actionTypes } from "./actionsTypes"
 let nextListId = 0;
 let nextTodoId = 0;
 
-export const addTodo = () => {
-  return {
-    type: actionTypes.ADD_TODO,
-    payload: {
-      id: nextTodoId++,
-      text: '',
-      checked: false,
-    },
-  }
-}
-
-export const editTodo = (id, text, checked) => {
-  return {
-    type: actionTypes.EDIT_TODO,
-    payload: {
-      id,
-      text,
-      checked,
-    },
-  }
-}
-
-export const deleteTodo = (id) => {
-  return {
-    type: actionTypes.DELETE_TODO,
-    payload: {
-      id,
-    },
-  }
-}
+// LIST
 
 export const addList = () => {
   return {
@@ -61,5 +32,43 @@ export const deleteList = (id) => {
     payload: {
       id,
     }
+  }
+}
+
+// TODO
+
+export const addTodo = (listId) => {
+  return {
+    type: actionTypes.ADD_TODO,
+    payload: {
+      id: listId,
+      todo: {
+        id: nextTodoId++,
+        text: '',
+        checked: false,
+      },
+    },
+  }
+}
+
+export const editTodo = (listId, id, text, checked) => {
+  return {
+    type: actionTypes.EDIT_TODO,
+    payload: {
+      listId,
+      id,
+      text,
+      checked,
+    },
+  }
+}
+
+export const deleteTodo = (id, listId) => {
+  return {
+    type: actionTypes.DELETE_TODO,
+    payload: {
+      todoId: id,
+      listId
+    },
   }
 }

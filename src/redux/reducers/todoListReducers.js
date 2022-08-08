@@ -38,36 +38,72 @@ export default function todoList(state=initialState, action) {
         lists: state.lists.filter((list) => list.id !== action.payload.id),
       }
 
-    // case actionTypes.ADD_TODO:
-    //   return {
-    //     ...state,
-    //     todos: [
-    //       ...state.todos,
-    //       action.payload
-    //     ]
-    //   }
-    // case actionTypes.EDIT_TODO:
-    //   const todoEdited = state.todos.map((todo) => {
-    //     if(todo.id === action.payload.id) {
-    //       return {
-    //         ...todo,
-    //         text: action.payload.text,
-    //         checked: action.payload.checked,
-    //       }
-    //     }
-    //     return todo;
-    //   })
+    case actionTypes.ADD_TODO:
+      const listTodo = state.lists.map((list) => {
+        if(list.id.toString() === action.payload.id) {
+          return {
+            ...list,
+            todos: [
+              ...list.todos,
+              {
+                id: action.payload.todo.id,
+                text: action.payload.todo.text,
+                checked: action.payload.todo.checked,
+              }
+            ],
+          }
+        }
+        return list;
+      });
 
-    //   return {
-    //     ...state, 
-    //     todos: todoEdited
-    //   }
+      return {
+        ...state,
+        lists: listTodo,  
+      }
+      
+    case actionTypes.EDIT_TODO:
 
-    // case actionTypes.DELETE_TODO:
-    //   return {
-    //     ...state,
-    //     todos: state.todos.filter((todoElem) => todoElem.id !== action.payload.id)
-    //   }
+      const listTodoEdited = state.lists.map((list) => {
+        if(list.id.toString() === action.payload.listId) {
+          return {
+            ...list,
+            todos: list.todos.map((todo) => {
+              if(todo.id === action.payload.id) {
+                return {
+                  ...todo,
+                  text: action.payload.text,
+                  checked: action.payload.checked,
+                }
+              }
+
+              return todo;
+            })
+          }
+        }
+        return list;
+      });
+
+      return {
+        ...state, 
+        lists: listTodoEdited
+      }
+
+    case actionTypes.DELETE_TODO:
+      const listTodoDelete = state.lists.map((list) => {
+        if(list.id.toString() === action.payload.listId) {
+          return {
+            ...list,
+            todos: list.todos.filter((todo) => todo.id !== action.payload.todoId),
+          }
+        }
+        return list;
+      });
+      
+      return {
+        ...state,
+        lists: listTodoDelete,
+      }
+
     default:
       return state;
   }

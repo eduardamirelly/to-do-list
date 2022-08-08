@@ -16,14 +16,14 @@ function TodosPage() {
 
       <div className="container">
         <HeaderPage title={listClicked.title} isReturn={true}>
-          <ButtonAddTodo />
+          <ButtonAddTodo listId={listId} />
         </HeaderPage>
       </div>
 
       <div className="container">
         {
           listClicked.todos.map((todo) => (
-            <Todo key={todo.id} id={todo.id} text={todo.text} checked={todo.checked} />
+            <Todo key={todo.id} id={todo.id} text={todo.text} checked={todo.checked} listId={listId} />
           ))
         }
       </div>
