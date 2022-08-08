@@ -33,7 +33,7 @@ A simple to-do list.
 
 ## 🔖 Layout
 
-You can view the project layout through [this link](). It's necessary have account on [Figma](http://figma.com/) to access.
+You can view the project layout through [this link](https://www.figma.com/community/file/1138475967954448460).
 
 ## 🏁 Running the project
 
