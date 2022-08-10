@@ -1,6 +1,4 @@
-<p align="center">
-  <img src=".github/video-todo-list.gif" />
-</p>
+![cover](.github/cover-todo.png?style=flat)
 
 <p align="center">
   <img alt="License" src="https://img.shields.io/static/v1?label=license&message=MIT&color=F25551&labelColor=241722">
