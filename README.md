@@ -6,7 +6,6 @@ https://user-images.githubusercontent.com/50642233/183943048-3d559701-f5e9-4a2e-
   <img alt="License" src="https://img.shields.io/static/v1?label=license&message=MIT&color=F25551&labelColor=241722">
   <img alt="GitHub contributors" src="https://img.shields.io/github/contributors/eduardamirelly/to-do-list?color=F35551&labelColor=241722">
   <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/eduardamirelly/to-do-list?color=F35551&labelColor=241722">
-  <img alt="Personal Project Tag" src="https://img.shields.io/static/v1?label=personal project&message=:)&color=F35551&labelColor=241722">
 </p>
 
 <p align="center">
