@@ -22,15 +22,15 @@ A simple to-do list.
 
 ## ✨ Technologies
 
--   [ ] Vite
--   [ ] React
--   [ ] TailwindCSS
--   [ ] Redux
--   [ ] Redux Persist
+-   [x] Vite
+-   [x] React
+-   [x] TailwindCSS
+-   [x] Redux
+-   [x] Redux Persist
 
 ## 🚀 Deploy
 
--   [ ] Vercel
+-   [x] Vercel
 
 ## 🔖 Layout
 
